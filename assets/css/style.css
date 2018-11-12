@@ -1,0 +1,34 @@
+body, html 
+{
+  font-family: Verdana;
+  font-size: 12px;
+  background: #000;
+}
+#chartdiv {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+#chartdiv .amChartsPeriodSelector {
+  padding-left: 35px;
+}
+.amChartsButtonSelected {
+  font-weight: bold;
+}
+.amChartsButton {
+  color: #fff;
+  background: transparent;
+  opacity: 0.7;
+  border: 1px solid rgba(255,255,2555,.3);
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 1px;
+  outline: none;
+  box-sizing: border-box;
+}
+.amChartsInputField {
+  color: #000;
+} 
+	.amcharts-chart-div a {
+		display:none !important;
+	}
