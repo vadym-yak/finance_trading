@@ -1,4 +1,5 @@
 <?php
+	// $tbl = $_POST['model'];
 	$con=mysqli_connect("localhost","root","","mltr");
 	$chartData = [];
 	$i = 0;

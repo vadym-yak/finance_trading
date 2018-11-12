@@ -1,8 +1,18 @@
+// var chartData = [];
+// $.ajax({
+//     url: "dataLoader.php",
+//     type: "post",
+//     data: { model: "msft" },
+//     success: function(res) {
+//         chartData = JSON.parse(res);
+//         console.log(chartData);
+//     }
+// })
     var chart = AmCharts.makeChart("chartdiv", {
       "type": "stock",
       "color": "#fff",
       "dataSets": [{
-      "title": "MSFT",
+      "title": "ALGN",
         "fieldMappings": [{
           "fromField": "open",
           "toField": "open"
@@ -26,9 +36,12 @@
          * data loader for data set data
          */
         "dataLoader": {
-          "url": "dataLoader.php",
-          "format": "json"
+          "url": "include/dataLoader.php",
+          "format": "json",
+          "type": "post",
+          "data": { "model": 'msft' }
        },
+        // "dataProvider": chartData,
 
        /**
         * data loader for events data
@@ -85,13 +98,13 @@
             "negativeFillColors": "#db4c3c",
             "fillAlphas": 1,
             "balloonText": "open:<b>[[open]]</b><br>close:<b>[[close]]</b><br>low:<b>[[low]]</b><br>high:<b>[[high]]</b>",
-            // "comparedGraphLineThickness": 2,
-            // "columnWidth": 0.7,
+            "comparedGraphLineThickness": 2,
+            "columnWidth": 0.7,
             "useDataSetColors": false,
-            // "comparable": true,
-            // "compareField": "close",
+            "comparable": true,
+            "compareField": "close",
             // "showBalloon": false,
-            "proCandlesticks": true
+            "proCandlesticks": true,
           }],
 
           "stockLegend": {
@@ -99,7 +112,7 @@
             "markerSize": 0,
             "valueWidth": 250,
             "valueTextRegular": undefined,
-            // "periodValueTextComparing": "[[percents.value.close]]%"
+            "periodValueTextComparing": "[[percents.value.close]]%"
           }
 
         },
@@ -179,8 +192,8 @@
         "cursorAlpha": 0.1,
         "pan": true,
         "valueLineEnabled": true,
-        "zoomable": true
-        // "valueLineBalloonEnabled": true
+        "zoomable": true,
+        "valueLineBalloonEnabled": true
       },
 
       "legendSettings": {
