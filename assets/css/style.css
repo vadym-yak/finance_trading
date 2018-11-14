@@ -8,11 +8,25 @@ body, html
   padding: 0;
 }
 
+h2, h3, h4 {
+	color: white;
+}
+
+.content {
+	width: calc( 100% - 400px );
+	/* display: inline; */
+	float: left;
+}
+.sidebar {
+	width: 400px;
+	float: right;
+}
+
 /* Amchart CSS */
 /* ////////////////////////////////////////////////// */
 #chartdiv {
   width: 100%;
-  height: 500px;
+  height: 600px;
   position: relative;
 }
 #chartdiv .amChartsPeriodSelector {
@@ -40,6 +54,58 @@ body, html
 }
 /* ////////////////////////////////////////////////// */
 
+.main-body {
+	margin: 0 auto;
+	max-width: 1400px;
+}
+
+.news-content {
+	border-bottom: solid 1px #3a3c3e;
+	padding: 10px 20px;
+}
+
+.news-body {
+	padding: 25px 20px 20px;
+	margin: 0 auto;
+	max-width: 1400px;
+	clear: both;
+}
+
+.news-content ul li {
+	list-style: none;
+}
+
+.news-content ul li a {
+	text-decoration: none;
+}
+
+.news-content ul li .p-left {
+	display: table-cell;
+	vertical-align: top;
+	padding-right: 10px;
+}
+
+.p-left img {
+	width: 100px;
+	height: auto;
+}
+
+.p-right {
+	display: table-cell;
+	width: 10000px;
+	vertical-align: top;
+	padding-left: 20px;
+}
+
+.p-right p {
+	color: #0095c5;
+    font-size: 18px;
+    margin: 7px 0px 0px;
+}
+
+.p-right span {
+	color: #6a6a6c;
+}
 .header-body{
 	background-color:#292c2f;
 	box-shadow:0 1px 1px #ccc;
@@ -47,6 +113,7 @@ body, html
 	height: 80px;
 	color: #ffffff;
 	box-sizing: border-box;
+	margin: 0 auto;
 }
 
 .header-body .header-limiter {
@@ -181,7 +248,7 @@ body, html
 	border-top-color:#fff;
 }
 
-.header-limiter .header-user-menu table {
+.header-limiter .tbl-stock-list {
 	display: none;
 	font:bold 13px Arial, Helvetica, sans-serif;
 	background-color: inherit;
@@ -198,22 +265,37 @@ body, html
 	z-index: 100;
 	border-collapse: collapse;
 }
-.header-limiter .header-user-menu table thead th {
+
+.tbl-stock-list.right-list {
+	font:bold 13px Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	margin-left: 10px;
+	color: #ccc;
+}
+
+table.right-list tr td {
+	height: 30px;
+}
+table.right-list tbody tr {
+	border-bottom: solid 1px #3a3c3e;
+	margin: 15px 0px;
+}
+.tbl-stock-list thead th {
 	text-align: center;
 	color: gray;
 	padding: 5px 8px;
 }
 
-.header-limiter .header-user-menu table tbody tr:hover {
+.tbl-stock-list tbody tr:hover {
 	cursor: pointer;
 	background: gray;
 }
 
-/* .header-limiter .header-user-menu table tbody tr:hover td {
+/* .tbl-stock-list tbody tr:hover td {
 	background: red;
 } */
 
-.header-limiter .header-user-menu table tbody tr td {
+.tbl-stock-list tbody tr td {
 	text-align: left;
 	/* color: gray; */
 	padding: 5px 8px;
@@ -292,3 +374,17 @@ body, html
 .dropdown-content a:hover {background-color: gray;}
 .dropdown:hover .dropdown-content {display: block;}
 /* .dropdown:hover .dropbtn {background-color: transparent;} */
+
+
+
+@media (max-width: 1295px) {
+	header, .main-body, .news-body {
+		max-width: 960px;
+	}
+}
+
+@media (max-width: 1400px) {
+	header, .main-body, .news-body {
+		max-width: 1200px;
+	}
+}

@@ -22,7 +22,7 @@
             }
             mysqli_free_result($result);
         }
-        echo "SELECT * FROM user_table where username='".$username."' and password='".$password."'";
+        // echo "SELECT * FROM user_table where username='".$username."' and password='".$password."'";
     } else if ( $type == 'logout')  {
         $_SESSION['username'] = '';
     } else {

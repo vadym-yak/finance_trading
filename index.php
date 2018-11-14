@@ -1,6 +1,5 @@
 <?php
     session_start();
-    echo $_SESSION['username'].'ddddd';
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -8,7 +7,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>amCharts Data Loader Example</title>
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon"/>
+    <title>ML Predictive</title>
     <script src="http://www.amcharts.com/lib/3/amcharts.js"></script>
     <script src="http://www.amcharts.com/lib/3/serial.js"></script>
     <script src="http://www.amcharts.com/lib/3/amstock.js"></script>
@@ -22,12 +22,13 @@
 </head>
 
 <body>
+
     <header class="header-body">
         <div class="header-limiter">
             <h1><a href="#">Company<span>logo</span></a></h1>
             <nav>
                 <div class="header-user-menu"><span>ALGN</span>
-                    <table>
+                    <table class="tbl-stock-list">
                         <thead>
                             <th>Name</th>
                             <th>Change</th>
@@ -83,8 +84,109 @@
             </ul>
         </div>
     </header>
-
-    <div id="chartdiv"></div>
+    <div class="main-body">
+        <div class="content">
+            <div id="chartdiv"></div>
+        </div>
+        <div class="sidebar">
+            <div class="header-user-menu" style="margin-top: 30px;"><h2 style="color:white; margin-left: 10px;">ALGN</h2>
+                <table class="tbl-stock-list right-list">
+                    <thead>
+                        <th>Name</th>
+                        <th>Change</th>
+                        <th>Open</th>
+                        <th>Close</th>
+                        <th>High</th>
+                        <th>Low</th>
+                        <th>Volume</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ALGN</td>
+                            <td style="color: #22caac;">0.15%</td>
+                            <td>36.58</td>
+                            <td>35.58</td>
+                            <td>38.7</td>
+                            <td>37.98</td>
+                            <td>1578954</td>
+                        </tr>
+                        <tr>
+                            <td>POLY</td>
+                            <td style="color: #fd3d73;">0.08%</td>
+                            <td>69.52</td>
+                            <td>68.22</td>
+                            <td>70.56</td>
+                            <td>69.87</td>
+                            <td>59875512</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="news-body">
+        <h2>Recent News</h2>
+        <hr>
+        <div class="news-content">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="p-left">
+                            <img src="./assets/blog-img/finance32.jpg" />
+                        </div>
+                        <div class="p-right">
+                            <p>Market Close Report: NASDAQ Composite index closes at 7,200.87 down -206.03 points</p>
+                            <span> 11/12/2018 9:45:14 PM - NASDAQ.com News</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="p-left">
+                            <img src="./assets/blog-img/gettyimages-857015410-1_large.jpg" />
+                        </div>
+                        <div class="p-right">
+                            <p>Better Buy: Intuitive Surgical (ISRG) vs. Align Technology (ALGN)</p>
+                            <span> 11/12/2018 1:17:00 PM - Motley Fool</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="p-left">
+                            <img src="./assets/blog-img/finance76.jpg" />
+                        </div>
+                        <div class="p-right">
+                            <p>Oversold Conditions For Align Technology (ALGN)</p>
+                            <span> 11/9/2018 6:21:27 PM - BNK Invest</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="p-left">
+                            <img src="./assets/blog-img/finance68.jpg" />
+                        </div>
+                        <div class="p-right">
+                            <p>Align Technology (ALGN) Gains As Market Dips: What You Should Know</p>
+                            <span> 11/8/2018 10:45:20 PM - Zacks.com</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="p-left">
+                            <img src="./assets/blog-img/finance08.jpg" />
+                        </div>
+                        <div class="p-right">
+                            <p>Market Close Report: NASDAQ Composite index closes at 7,570.75 up 194.79 points</p>
+                            <span> 11/7/2018 9:45:15 PM - NASDAQ.com News</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
     <div id="login-box" class="login-popup">
         <a href="#" class="close"><img src="./assets/img/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>
