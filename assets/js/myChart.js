@@ -174,9 +174,13 @@
       },
 
       "categoryAxesSettings": {
+        // "groupToPeriods": ["DD"],
+        // "minorGridEnabled": true, 
         "equalSpacing": true,
         "gridColor": "#555",
-        "gridAlpha": 1
+        "gridAlpha": 1,
+        // "minPeriod": "YYYY",
+        "parseDates": true
       },
 
       "valueAxesSettings": {
@@ -242,3 +246,16 @@
         }]
       }
     });
+
+    function setGrouping(groupTo, button) {
+      // set chart grouping
+      chart.categoryAxesSettings.groupToPeriods = [groupTo];
+      chart.validateData();
+    
+      // set selected style on the button
+      var buttons = button.parentNode.getElementsByTagName("input");
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].className = "";
+      }
+      button.className = "selected";
+    }

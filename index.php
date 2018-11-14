@@ -86,7 +86,15 @@
     </header>
     <div class="main-body">
         <div class="content">
-            <div id="chartdiv"></div>
+            <div class="charttools">
+                Group by:
+                <input type="button" value="days" onclick="setGrouping('DD', this);" class="selected" />
+                <input type="button" value="weeks" onclick="setGrouping('WW', this);" />
+                <input type="button" value="months" onclick="setGrouping('MM', this);" />
+            </div>
+            <div id="chartdiv">
+            
+            </div>
         </div>
         <div class="sidebar">
             <div class="header-user-menu" style="margin-top: 30px;"><h2 style="color:white; margin-left: 10px;">ALGN</h2>
