@@ -16,6 +16,8 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/login_signup.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/tab_panel.css">
+
     <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="./assets/js/myChart.js"></script>
     <script type="text/javascript" src="./assets/js/login_signup.js"></script>
@@ -133,66 +135,20 @@
         </div>
     </div>
     <div class="news-body">
-        <h2>Recent News</h2>
-        <hr>
-        <div class="news-content">
-            <ul>
-                <li>
-                    <a href="#">
-                        <div class="p-left">
-                            <img src="./assets/blog-img/finance32.jpg" />
-                        </div>
-                        <div class="p-right">
-                            <p>Market Close Report: NASDAQ Composite index closes at 7,200.87 down -206.03 points</p>
-                            <span> 11/12/2018 9:45:14 PM - NASDAQ.com News</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="p-left">
-                            <img src="./assets/blog-img/gettyimages-857015410-1_large.jpg" />
-                        </div>
-                        <div class="p-right">
-                            <p>Better Buy: Intuitive Surgical (ISRG) vs. Align Technology (ALGN)</p>
-                            <span> 11/12/2018 1:17:00 PM - Motley Fool</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="p-left">
-                            <img src="./assets/blog-img/finance76.jpg" />
-                        </div>
-                        <div class="p-right">
-                            <p>Oversold Conditions For Align Technology (ALGN)</p>
-                            <span> 11/9/2018 6:21:27 PM - BNK Invest</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="p-left">
-                            <img src="./assets/blog-img/finance68.jpg" />
-                        </div>
-                        <div class="p-right">
-                            <p>Align Technology (ALGN) Gains As Market Dips: What You Should Know</p>
-                            <span> 11/8/2018 10:45:20 PM - Zacks.com</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="p-left">
-                            <img src="./assets/blog-img/finance08.jpg" />
-                        </div>
-                        <div class="p-right">
-                            <p>Market Close Report: NASDAQ Composite index closes at 7,570.75 up 194.79 points</p>
-                            <span> 11/7/2018 9:45:15 PM - NASDAQ.com News</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+        <div class="tabPanel-widget">
+            <label for="tab-1" tabindex="0"></label>
+            <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
+            <h2>News</h2>
+            <div>
+                <?php include_once('include/news_panel.php'); ?>
+            </div>
+            <label for="tab-2" tabindex="0"></label>
+            <input id="tab-2" type="radio" name="tabs" aria-hidden="true">
+            <h2>Press Releases</h2>
+            <div>
+                <p>Represents a generic document or application section. In this context, a section is a thematic grouping of content, typically with a header, possibly with a footer. Examples include chapters in a book, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A web site's home page could be split into sections for an introduction, news items, contact information.</p>
+                <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Section</p>
+            </div>        
         </div>
     </div>
 

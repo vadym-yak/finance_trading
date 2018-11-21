@@ -93,6 +93,11 @@ h2, h3, h4 {
 	padding: 10px 20px;
 }
 
+.news-content ul {
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
 .news-body {
 	padding: 25px 20px 20px;
 	margin: 0 auto;

@@ -1,14 +1,8 @@
 <?php
 	// $tbl = $_POST['model'];
-	$con=mysqli_connect("localhost","root","","mltr");
+	include_once('db.php');
 	$chartData = [];
 	$i = 0;
-	// Check connection
-	if (mysqli_connect_errno())
-	  {
-	  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-	  }
-
 	// Perform queries 
 	$result = mysqli_query($con,"SELECT `date`, `open`, `close`, `high`, `low`, `volume` FROM msft");
 
