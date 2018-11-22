@@ -4,7 +4,7 @@ var model = location.search.split("model=")[1];
 if ( !model ) {
   model = "ALGN";
 }
-var stock_type = ['ALGN', 'IBM', 'AAL', 'POLY.Y', 'RRS.L', ''];
+var stock_type = ['ALGN', 'IBM', 'AAL', 'POLY.L', 'RRS.L'];
 // console.log(model);
 function setGrouping(groupTo, button) {
   // set chart grouping
