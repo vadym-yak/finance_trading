@@ -21,6 +21,7 @@
     <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="./assets/js/myChart.js"></script>
     <script type="text/javascript" src="./assets/js/login_signup.js"></script>
+    <script type="text/javascript" src="./assets/js/function.js"></script>
 </head>
 
 <body>
@@ -146,8 +147,7 @@
             <input id="tab-2" type="radio" name="tabs" aria-hidden="true">
             <h2>Press Releases</h2>
             <div>
-                <p>Represents a generic document or application section. In this context, a section is a thematic grouping of content, typically with a header, possibly with a footer. Examples include chapters in a book, the various tabbed pages in a tabbed dialog box, or the numbered sections of a thesis. A web site's home page could be split into sections for an introduction, news items, contact information.</p>
-                <p>Source: <a href="http://html5doctor.com/element-index/">html5doctor</a> for Section</p>
+                <?php include_once('include/press_panel.php'); ?>
             </div>        
         </div>
     </div>

@@ -130,6 +130,7 @@ h2, h3, h4 {
 	width: 10000px;
 	vertical-align: top;
 	padding-left: 20px;
+	cursor: pointer;
 }
 
 .p-right p {
@@ -138,6 +139,20 @@ h2, h3, h4 {
     margin: 7px 0px 0px;
 }
 
+.p-right.active .summary-detail {
+	display: block;
+	opacity: 1;
+	height: auto;
+}
+
+.summary-detail {
+	display: none;
+	opacity: 0;
+	height: 0;
+}
+.summary-detail {
+	transition: all 0.5s;
+}
 .p-right span {
 	color: #6a6a6c;
 }

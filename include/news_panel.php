@@ -13,7 +13,7 @@
                 $date = $row['date'];
             ?>
                 <li>
-                    <a href="#">
+                    <a class="news-item">
                         <?php
                         if ( $img != '' ) { 
                         ?>
@@ -24,6 +24,9 @@
                         <div class="p-right">
                             <p><?= $title ?></p>
                             <span> <?= $date ?> - yahoofinace.com News</span>
+                            <p class="summary-detail">
+                                <?= $row['summary'] ?>
+                            </p>
                         </div>
                     </a>
                 </li>

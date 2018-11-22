@@ -1,6 +1,6 @@
 <?php
     include_once('db.php');
-    $sql = 'SELECT * from presses';
+    $sql = 'SELECT * from press';
     $result = mysqli_query($con, $sql);
 
 ?>
@@ -8,19 +8,11 @@
             <ul>
             <?php
                 while ($row = $result->fetch_assoc()) {
-                $img = ( $row['image'] == 'not available ' || strpos($row['image'], 'spaceball')) ? '' : $row['image'];
                 $title = $row['title'];
                 $date = $row['date'];
             ?>
                 <li>
                     <a href="#">
-                        <?php
-                        if ( $img != '' ) { 
-                        ?>
-                        <div class="p-left">
-                            <img src="<?= $img ?>" />
-                        </div>
-                        <?php } ?>
                         <div class="p-right">
                             <p><?= $title ?></p>
                             <span> <?= $date ?> - yahoofinace.com News</span>

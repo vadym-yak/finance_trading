@@ -109,10 +109,10 @@
 
           "stockLegend": {
             "markerType": "none",
-            "markerSize": 0,
-            "valueWidth": 250,
-            "valueTextRegular": undefined,
-            "periodValueTextComparing": "[[percents.value.close]]%"
+            // "markerSize": 0,
+            // "valueWidth": 250,
+            "valueTextRegular": ' ',
+            // "periodValueTextComparing": "[[percents.value.close]]%"
           }
 
         },
@@ -163,7 +163,7 @@
       "chartScrollbarSettings": {
         "graph": "g1",
         "graphType": "line",
-        "usePeriod": "WW",
+        "usePeriod": "mm",
         "backgroundColor": "#333",
         "graphFillColor": "#666",
         "graphFillAlpha": 0.5,
@@ -174,13 +174,14 @@
       },
 
       "categoryAxesSettings": {
-        // "groupToPeriods": ["DD"],
-        // "minorGridEnabled": true, 
-        "equalSpacing": true,
-        "gridColor": "#555",
-        "gridAlpha": 1,
-        // "minPeriod": "YYYY",
-        "parseDates": true
+        "groupToPeriods": ["mm"],
+        "minorGridEnabled": true, 
+        // "equalSpacing": true,
+        // "gridColor": "#555",
+        // "gridAlpha": 1,
+        "minPeriod": "mm",
+        // "parseDates": true,
+        // "maxSeries": 150,
       },
 
       "valueAxesSettings": {
@@ -218,28 +219,17 @@
         "position": "bottom",
         "periods": [{
           "period": "DD",
-          "count": 10,
-          "label": "10D"
-        }, {
-          "period": "MM",
           "count": 1,
-          "label": "1M"
+          "label": "1D"
         }, {
-          "period": "MM",
-          "count": 6,
-          "label": "6M"
-        }, {
-          "period": "YYYY",
+          "period": "hh",
           "count": 1,
-          "label": "1Y"
+          "label": "1Hour"
         }, {
-          "period": "YYYY",
-          "count": 2,
-          "selected": true,
-          "label": "2Y"
-        }, {
-          "period": "YTD",
-          "label": "YTD"
+          "period": "mm",
+          "count": 30,
+          "label": "30Min",
+          "selected": true
         }, {
           "period": "MAX",
           "label": "MAX"

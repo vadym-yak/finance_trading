@@ -109,7 +109,7 @@ body {
    */
   .tabPanel-widget input:checked + h2 + div {
     position: static !important;
-    padding: 1em !important;
+    /* padding: 1em !important; */
     height: auto !important; 
     width: auto !important; 
   }
