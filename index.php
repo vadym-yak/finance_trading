@@ -30,38 +30,10 @@
         <div class="header-limiter">
             <h1><a href="#">Company<span>logo</span></a></h1>
             <nav>
-                <div class="header-user-menu"><span>ALGN</span>
-                    <table class="tbl-stock-list">
-                        <thead>
-                            <th>Name</th>
-                            <th>Change</th>
-                            <th>Open</th>
-                            <th>Close</th>
-                            <th>High</th>
-                            <th>Low</th>
-                            <th>Volume</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>ALGN</td>
-                                <td style="color: #22caac;">0.15%</td>
-                                <td>36.58</td>
-                                <td>35.58</td>
-                                <td>38.7</td>
-                                <td>37.98</td>
-                                <td>1578954</td>
-                            </tr>
-                            <tr>
-                                <td>POLY</td>
-                                <td style="color: #fd3d73;">0.08%</td>
-                                <td>69.52</td>
-                                <td>68.22</td>
-                                <td>70.56</td>
-                                <td>69.87</td>
-                                <td>59875512</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="header-user-menu"><span class="model-name">ALGN</span>
+                    <?php
+                        include('/include/header_table.php');
+                    ?>
                 </div>
             </nav>
             <ul>
@@ -100,38 +72,8 @@
             </div>
         </div>
         <div class="sidebar">
-            <div class="header-user-menu" style="margin-top: 30px;"><h2 style="color:white; margin-left: 10px;">ALGN</h2>
-                <table class="tbl-stock-list right-list">
-                    <thead>
-                        <th>Name</th>
-                        <th>Change</th>
-                        <th>Open</th>
-                        <th>Close</th>
-                        <th>High</th>
-                        <th>Low</th>
-                        <th>Volume</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ALGN</td>
-                            <td style="color: #22caac;">0.15%</td>
-                            <td>36.58</td>
-                            <td>35.58</td>
-                            <td>38.7</td>
-                            <td>37.98</td>
-                            <td>1578954</td>
-                        </tr>
-                        <tr>
-                            <td>POLY</td>
-                            <td style="color: #fd3d73;">0.08%</td>
-                            <td>69.52</td>
-                            <td>68.22</td>
-                            <td>70.56</td>
-                            <td>69.87</td>
-                            <td>59875512</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="header-user-menu" style="margin-top: 30px;"><h2 style="color:white; margin-left: 10px;"><span class="model-name">ALGN</span></h2>
+                <?php include('/include/header_table.php'); ?>
             </div>
         </div>
     </div>
