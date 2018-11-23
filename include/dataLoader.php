@@ -7,7 +7,7 @@
 	$chartData = [];
 	$i = 0;
 	// Perform queries 
-	$result = mysqli_query($con,"SELECT `price`, `schange`, `percent`, `updatetime`, `sopen`, `previousclose`, `high`, `low`, `volume` FROM stocksdata where company='".$company."'");
+	$result = mysqli_query($con,"SELECT `price`, `schange`, `percent`, `updatetime`, `sopen`, `previousclose`, `high`, `low`, `volume` FROM stocksdata where company='".$company."' order by updatetime desc");
 
 	while ($row = $result->fetch_assoc())
 	{
