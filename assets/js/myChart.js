@@ -91,34 +91,34 @@ function reloadChart() {
               "percentHeight": 70,
       
               "stockGraphs": [{
-                // "type": "line",
+                "type": "candlestick",
                 "id": "g1",
                 "openField": "open",
                 "closeField": "close",
                 "highField": "high",
                 "lowField": "low",
                 "valueField": "price",
-                // "lineColor": "#fff",
-                // "fillColors": "#fff",
-                // "negativeLineColor": "#db4c3c",
-                // "negativeFillColors": "#db4c3c",
-                // "fillAlphas": 1,
+                "lineColor": "#fff",
+                "fillColors": "#fff",
+                "negativeLineColor": "#db4c3c",
+                "negativeFillColors": "#db4c3c",
+                "fillAlphas": 1,
                 "balloonText": "open:<b>[[open]]</b><br>close:<b>[[close]]</b><br>low:<b>[[low]]</b><br>high:<b>[[high]]</b>",
-                // "comparedGraphLineThickness": 2,
-                // "columnWidth": 0.7,
-                // "useDataSetColors": false,
+                "comparedGraphLineThickness": 2,
+                "columnWidth": 0.7,
+                "useDataSetColors": false,
                 "comparable": true,
                 "compareField": "close",
                 // "showBalloon": false,
-                // "proCandlesticks": true,
+                "proCandlesticks": true,
               }],
       
               "stockLegend": {
-                // "markerType": "none",
+                "markerType": "none",
                 // "markerSize": 0,
                 // "valueWidth": 250,
-                "valueTextRegular": '[[value.close]]',
-                "periodValueTextComparing": "[[percents.value.close]]%"
+                "valueTextRegular": ' ',
+                // "periodValueTextComparing": "[[percents.value.close]]%"
               }
       
             },
