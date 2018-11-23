@@ -1,7 +1,8 @@
 <?php
-	$company = $_POST['model'];
-	$stock_types = $_POST['types'];
-	// $company = 'RRS.L';
+	$company = isset($_POST['model'])?$_POST['model']:'ALGN';
+	$stock_types = isset($_POST['types'])?$_POST['types']:'ALGN,IBM,AAL,POLY.L,RRS.L';
+	// $company = 'ALGN';
+	// $stock_types = 'ALGN,IBM,AAL,POLY.L,RRS.L';
 	include_once('db.php');
 	$chartData = [];
 	$i = 0;

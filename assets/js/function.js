@@ -1,19 +1,19 @@
 function getCurrentStockBodyHtml(stock_types, stock_datas) {
     var i_html = '';
     for (var i=0; i<stock_types.length; i++ ) {
-        i_html += '<tr>';
-        i_html += '<td><a href="./?model='+stock_datas[i][1]+'">' + stock_datas[i][1] + '</a></td>';
-        i_html += '<td><a href="./?model='+stock_datas[i][1]+'">' + stock_datas[i][2] + '</a></td>';
+        i_html += '<tr class="stock-row" data-model="'+stock_datas[i][1]+'">';
+        i_html += '<td>' + stock_datas[i][1] + '</td>';
+        i_html += '<td>' + stock_datas[i][2] + '</td>';
         if (stock_datas[i][4].substring(0, 1) == '+') {
-            i_html += '<td style="color: #22caac;"><a href="./?model='+stock_datas[i][1]+'">' + stock_datas[i][4] + '</a></td>';
+            i_html += '<td style="color: #22caac;">' + stock_datas[i][4] + '</td>';
         } else {
-            i_html += '<td style="color: #fd3d73;"><a href="./?model='+stock_datas[i][1]+'">' + stock_datas[i][4] + '</a></td>';
+            i_html += '<td style="color: #fd3d73;">' + stock_datas[i][4] + '</td>';
         }
-        i_html += '<td><a href="./?model='+stock_datas[i][1]+'">' + stock_datas[i][5] + '</a></td>';
-        i_html += '<td><a href="./?model='+stock_datas[i][1]+'">' + stock_datas[i][6] + '</a></td>';
-        i_html += '<td><a href="./?model='+stock_datas[i][1]+'">' + stock_datas[i][7] + '</a></td>';
-        i_html += '<td><a href="./?model='+stock_datas[i][1]+'">' + stock_datas[i][8] + '</a></td>';
-        i_html += '<td><a href="./?model='+stock_datas[i][1]+'">' + stock_datas[i][9] + '</a></td>';
+        i_html += '<td>' + stock_datas[i][5] + '</td>';
+        i_html += '<td>' + stock_datas[i][6] + '</td>';
+        i_html += '<td>' + stock_datas[i][7] + '</td>';
+        i_html += '<td>' + stock_datas[i][8] + '</td>';
+        i_html += '<td>' + stock_datas[i][9] + '</td>';
         i_html += '</tr>';
     }
     

@@ -32,8 +32,22 @@
             <nav>
                 <div class="header-user-menu"><span class="model-name">ALGN</span>
                     <?php
-                        include('/include/header_table.php');
+                        // include('/include/header_table.php');
                     ?>
+                    <table class="tbl-stock-list">
+                        <thead>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Change</th>
+                            <th>Open</th>
+                            <th>Close</th>
+                            <th>High</th>
+                            <th>Low</th>
+                            <th>Volume</th>
+                        </thead>
+                        <tbody class="cur-history-stock">
+                        </tbody>
+                    </table>
                 </div>
             </nav>
             <ul>
@@ -73,7 +87,21 @@
         </div>
         <div class="sidebar">
             <div class="header-user-menu" style="margin-top: 30px;"><h2 style="color:white; margin-left: 10px;"><span class="model-name">ALGN</span></h2>
-                <?php include('/include/header_table.php'); ?>
+                <?php //include('/include/header_table.php'); ?>
+                <table class="tbl-stock-list">
+                    <thead>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Change</th>
+                        <th>Open</th>
+                        <th>Close</th>
+                        <th>High</th>
+                        <th>Low</th>
+                        <th>Volume</th>
+                    </thead>
+                    <tbody class="cur-history-stock">
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
